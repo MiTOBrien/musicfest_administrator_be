@@ -7,3 +7,29 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+users = [
+  { first_name: "Mark", last_name: "Ballard", email: "mark_ballard@ballard.com" },
+  { first_name: "Jen", last_name: "Ballard", email: "jen_ballard@ballard.com" },
+  { first_name: "TJ", last_name: "Shiipley", email: "tj_shipley@shipley.com" },
+  { first_name: "Nikki", last_name: "Shipley", email: "nikki_shipley@shipley.com" },
+  { first_name: "Bill", last_name: "Peters", email: "bill_peters@peters.com" },
+  { first_name: "Edith", last_name: "Peters", email: "edith_peters.com" }
+].map do |user_data|
+  User.create!(user_data)
+end
+
+shows = [
+  { artist: "Taylor Swift", location: "Stage 1", date: Date.new(2025, 1, 31), time: Time.parse("20:00") },
+  { artist: "Paul Rudd", location: "Stage 2", date: Date.new(2025, 1, 31), time: Time.parse("20:00") },
+  { artist: "Dirty Blonde", location: "Stage 1", date: Date.new(2025, 2, 1), time: Time.parse("12:00") }, 
+  { artist: "Twistur", location: "Stage 2", date: Date.new(2025, 2, 1), time: Time.parse("12:00") }, 
+  { artist: "Death Lens", location: "Stage 1", date: Date.new(2025, 2, 1), time: Time.parse("16:00") }, 
+  { artist: "Blondshell", location: "Stage 2", date: Date.new(2025, 2, 1), time: Time.parse("16:00") }, 
+  { artist: "Carrie Underwood", location: "Stage 1", date: Date.new(2025, 2, 1), time: Time.parse("20:00") }, 
+  { artist: "Parmalee", location: "Stage 2", date: Date.new(2025, 2, 1), time: Time.parse("20:00") }, 
+  { artist: "Dan & Shay", location: "Stage 1", date: Date.new(2025, 2, 2), time: Time.parse("12:00") },
+  { artist: "Drake", location: "Stage 2", date: Date.new(2025, 2, 2), time: Time.parse("12:00") }
+].map do |show_data|
+  Show.create!(show_data)
+end
