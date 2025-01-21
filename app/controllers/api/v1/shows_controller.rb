@@ -1,7 +1,8 @@
 class Api::V1::ShowsController < ApplicationController
   
-  def show
-
+  def destroy
+    show = Show.find(params[:id])
+    show.destroy
   end
   
 end
