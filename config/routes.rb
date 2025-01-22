@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index, :show]
-      resources :shows, only: [:destroy]
-      resources :schedules, only: [:index, :show, :create]
+      resources :schedules, only: [:index, :show, :create, :destoy]
     end
   end
 end
