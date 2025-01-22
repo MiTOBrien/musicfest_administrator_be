@@ -6,13 +6,22 @@ class Api::V1::SchedulesController < ApplicationController
   end
 
   def show
-    schedule = Schedule.includes(:user, :show).where(user_id: params[:id])
-    render json: ScheduleSerializer.show_schedule(schedule)
+    user_id = params[:id]
+    user = User.find_by(id: user_id)
+    name = "#{user.first_name} #{user.last_name}"
+    schedule = Schedule.where(user_id: user_id).select(:title, :date)
+    render json: { user_name: name, schedules: schedule }
   end
 
   def create
     schedule = Schedule.new(schedule_params)
     render json: schedule, status: :created
+  end
+
+  def destroy
+    schedule = Schedule.find_by(id: params[:id])
+    schedule.destroy
+    Render json: { message: 'Schedule successfully deleted.'}, status: :ok
   end
 
   private
