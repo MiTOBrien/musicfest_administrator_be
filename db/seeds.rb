@@ -33,3 +33,20 @@ shows = [
 ].map do |show_data|
   Show.create!(show_data)
 end
+
+  schedules = [
+    {title: "End of an Era", date: Date.new(2025, 1, 31), user_id: 1, show_id: 1},
+    {title: "End of an Era", date: Date.new(2025, 1, 31), user_id: 2, show_id: 1},
+    {title: "Litte Boo Show", date: Date.new(2025, 1, 31), user_id: 3, show_id: 2},
+    {title: "Litte Boo Show", date: Date.new(2025, 1, 31), user_id: 4, show_id: 2},
+    {title: "Carrie Live", date: Date.new(2025, 1, 31), user_id: 5, show_id: 7},
+    {title: "Carrie Live", date: Date.new(2025, 1, 31), user_id: 6, show_id: 7},
+    {title: "Dirty Blonde", date: Date.new(2025, 1, 31), user_id: 1, show_id: 3},
+    {title: "Dirty Blonde", date: Date.new(2025, 1, 31), user_id: 2, show_id: 3},
+    {title: "Twisted Rock", date: Date.new(2025, 1, 31), user_id: 3, show_id: 4},
+    {title: "Twisted Rock", date: Date.new(2025, 1, 31), user_id: 4, show_id: 4},
+    {title: "Just Off The Voice", date: Date.new(2025, 1, 31), user_id: 5, show_id: 9},
+    {title: "Just Off The Voice", date: Date.new(2025, 1, 31), user_id: 6, show_id: 9}
+].map do |schedule_data|
+  Schedule.create!(schedule_data)
+end

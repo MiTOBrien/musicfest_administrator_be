@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show]
       resources :shows, only: [:destroy]
+      resources :schedules, only: [:index, :show, :create]
     end
   end
 end
