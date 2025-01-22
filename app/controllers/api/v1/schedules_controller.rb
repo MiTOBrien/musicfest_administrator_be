@@ -1,7 +1,7 @@
 class Api::V1::SchedulesController < ApplicationController
   
   def index
-    schedules = Schedule.all()
+    schedules = Schedule.pluck('title', 'date').uniq
     render json: ScheduleSerializer.all_schedules(schedules)
   end
 

@@ -3,17 +3,7 @@ class ScheduleSerializer
   attributes :title, :date, :user_id, :show_id
 
   def self.all_schedules(schedules)
-    {
-      data: schedules.map do |schedule|
-        {
-          type: "schedule",
-            attributes: {
-              title: schedule.title,
-              date: schedule.date
-          }
-        }
-      end
-    }
+    schedules.map { |title, date| { title: title, date: date } }
   end
 
   def self.show_schedule(schedule)
