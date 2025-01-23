@@ -21,7 +21,7 @@ class Api::V1::SchedulesController < ApplicationController
   def destroy
     schedule = Schedule.find_by(id: params[:id])
     schedule.destroy
-    Render json: { message: 'Schedule successfully deleted.'}, status: :ok
+    Render json: { message: "Schedule successfully deleted."}, status: :ok
   end
 
   private
