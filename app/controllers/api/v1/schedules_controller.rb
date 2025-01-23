@@ -15,7 +15,11 @@ class Api::V1::SchedulesController < ApplicationController
 
   def create
     schedule = Schedule.new(schedule_params)
-    render json: schedule, status: :created
+    if schedule.save
+      render json: schedule, status: :created
+    else
+      render json: {errors: schedule.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy

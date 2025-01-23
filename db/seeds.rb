@@ -29,7 +29,8 @@ shows = [
   { artist: "Carrie Underwood", location: "Stage 1", date: Date.new(2025, 2, 1), time: Time.parse("20:00") }, 
   { artist: "Parmalee", location: "Stage 2", date: Date.new(2025, 2, 1), time: Time.parse("20:00") }, 
   { artist: "Dan & Shay", location: "Stage 1", date: Date.new(2025, 2, 2), time: Time.parse("12:00") },
-  { artist: "Drake", location: "Stage 2", date: Date.new(2025, 2, 2), time: Time.parse("12:00") }
+  { artist: "Drake", location: "Stage 2", date: Date.new(2025, 2, 2), time: Time.parse("12:00") },
+  { artist: "Vanilla Ice", location: "Stage 2", date: Date.new(2025, 2, 2), time: Time.parse("16:00") }
 ].map do |show_data|
   Show.create!(show_data)
 end
@@ -46,7 +47,12 @@ end
     {title: "Twisted Rock", date: Date.new(2025, 2, 1), user_id: 3, show_id: 4},
     {title: "Twisted Rock", date: Date.new(2025, 2, 1), user_id: 4, show_id: 4},
     {title: "Just Off The Voice", date: Date.new(2025, 2, 2), user_id: 5, show_id: 9},
-    {title: "Just Off The Voice", date: Date.new(2025, 2, 2), user_id: 6, show_id: 9}
+    {title: "Just Off The Voice", date: Date.new(2025, 2, 2), user_id: 6, show_id: 9},
+    {title: "End of an Era", date: Date.new(2025, 1, 31), user_id: 4, show_id: 1},
+    {title: "Litte Boo Show", date: Date.new(2025, 1, 31), user_id: 6, show_id: 2},
+    {title: "Carrie Live", date: Date.new(2025, 2, 1), user_id: 4, show_id: 7},
+    {title: "Dirty Blonde", date: Date.new(2025, 2, 1), user_id: 4, show_id: 3},
+    {title: "Ice, Ice, Baby", date: Date.new(2025, 2, 2), user_id: 4, show_id: 10}
 ].map do |schedule_data|
   Schedule.create!(schedule_data)
 end
